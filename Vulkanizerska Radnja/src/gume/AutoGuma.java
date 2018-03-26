@@ -1,5 +1,11 @@
 package gume;
 
+/**
+ * Klasa koja sadrzi marku i model gume, sve njene dimenzije( sirina, visina, precnik) sa get i set metodama i metode toString i equals
+ * @author milos
+ * @version 1.0
+ */
+
 public class AutoGuma {
 	
 	/**
@@ -33,8 +39,8 @@ public class AutoGuma {
 
 	/**
 	 * Metoda postavlja marku i model na odgovarajucu vrijednost
-	 * @param nova vrijednost za marku i model
-	 * @throws java.lang.RuntimeException ako se unese nedozvoljena vrijednost
+	 * @param markaModel predstavlja novu vrijednost za marku i model
+	 * @throws java.lang.RuntimeException ako je vrijednost markaModel null ili ja duzina manja od 3
 	 */
 	public void setMarkaModel(String markaModel) {
 		if (markaModel == null || markaModel.length() < 3)
@@ -52,8 +58,8 @@ public class AutoGuma {
 	
 	/**
 	 * Metoda postavlja precnik na odgovarajucu vrijednost
-	 * @param nova vrijednost precnika
-	 * @throws java.land.RuntimeException ako se unese nedozvoljenja vrijednost
+	 * @param precnik predstavlja novu vrijednost precnika
+	 * @throws java.land.RuntimeException ako je vrijednost precnika manja od 13 ili vec od 22
 	 */
 	public void setPrecnik(int precnik) {
 		if (precnik < 13 || precnik > 22)
@@ -71,8 +77,8 @@ public class AutoGuma {
 
 	/**
 	 * Metoda postavlja sirinu na odgovarajucu vrijednost
-	 * @param nova vrijednost sirine
-	 * @throws java.lang.RuntimeException ako se unese nedozvoljenja vrijednost
+	 * @param sirina predstavlja novu vrijednost sirine
+	 * @throws java.lang.RuntimeException ako je vrijednost sirina manja od 135 ili veca od 355
 	 */
 	public void setSirina(int sirina) {
 		if (sirina < 135 || sirina > 355)
@@ -90,8 +96,8 @@ public class AutoGuma {
 
 	/**
 	 * Metoda postavlja visinu na odgovarajucu vrijednost
-	 * @param nova vrijednost visine
-	 * @throws java.lang.RuntimeException ako se unese nedozvoljenja vrijednost
+	 * @param visina predstavlja novu vrijednost visine
+	 * @throws java.lang.RuntimeException ako je vrijednost visina manja od 25 ili veca od 95
 	 */
 	public void setVisina(int visina) {
 		if (visina < 25 || visina > 95)
@@ -110,8 +116,9 @@ public class AutoGuma {
 	}
 	
 	/**
-	 * Metoda koja poredi 2 objekta klase AutoGuma 
-	 * @return true ako su isti, false ako nisu isti
+	 * Metoda koja poredi 2 objekta klase AutoGuma(poredi atribute markaModel, precnik, visina i sirina)
+	 * @return true ako se svi atributi poklapaju
+	 * @return false ako se ne poklapaju svi atributi
 	 */
 	@Override
 	public boolean equals(Object obj) {
