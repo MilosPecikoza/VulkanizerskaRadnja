@@ -2,7 +2,7 @@ package gume;
 
 /**
  * Klasa koja sadrzi marku i model gume, sve njene dimenzije( sirina, visina, precnik) sa get i set metodama i metode toString i equals
- * @author milos
+ * @author Milos Pecikoza
  * @version 1.0
  */
 
